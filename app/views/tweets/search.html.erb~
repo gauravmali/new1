@@ -1,0 +1,26 @@
+<form>
+search page
+</br>
+<input type="text" name="query">
+      
+         <% if @tweets %>
+    <select name="query">
+    <option value="user"> <%= tweet.user.username %> </option>   
+   
+          
+         <%end%>
+        <%end%>       
+      </select>
+        
+         
+       
+<input type="submit" value="search">
+</br>
+    
+     <% if @tweets %>
+      <%@tweets.each do |tweet|%>
+        <p><%= tweet.comment %></p>    
+      <%end%>
+    <%end%>
+
+</form>
